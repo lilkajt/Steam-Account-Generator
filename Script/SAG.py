@@ -13,7 +13,7 @@ import pathlib
 
 chrome_options = Options()
 chrome_options.add_argument('--log-level=3')
-Version = '1.4'
+Version = '1.5'
 url = "https://store.steampowered.com/join"
 Domain_Input = ''
 
