@@ -1,0 +1,6 @@
+numpy==1.24.1
+keyboard==0.13.5
+pandas==1.5.3
+selenium==4.7.2
+discord==2.1.0
+openpyxl==3.0.10
