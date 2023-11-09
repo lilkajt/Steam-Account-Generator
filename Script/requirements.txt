@@ -4,3 +4,4 @@ pandas==2.1.2
 selenium==4.15.2
 discord==2.3.2
 openpyxl==3.1.2
+requests==2.31.0
