@@ -167,7 +167,7 @@ def GenAccount(email, username, password):
     driver.find_element(By.XPATH, '//*[@id="createAccountButton"]').click()
     Notification("email")
     print("\n\tEmail confirmed!")
-    SameEmail(driver)
+    # SameEmail(driver)
     time.sleep(2)
     driver.find_element(By.XPATH, '//*[@id="accountname"]').click()
     for x in username: driver.find_element(By.XPATH, '//*[@id="accountname"]').send_keys(x), time.sleep(np.random.uniform(0, 0.1))
@@ -177,7 +177,7 @@ def GenAccount(email, username, password):
     time.sleep(0.5)
     driver.find_element(By.XPATH, '//*[@id="reenter_password"]').click()
     for x in password: driver.find_element(By.XPATH, '//*[@id="reenter_password"]').send_keys(x), time.sleep(np.random.uniform(0, 0.1))
-    username = NameCheck(driver, username)
+    # username = NameCheck(driver, username)
     time.sleep(1)
     driver.find_element(By.XPATH, '//*[@id="createAccountButton"]').click()
     time.sleep(6)
@@ -187,6 +187,7 @@ def GenAccount(email, username, password):
     WebhookSend(email, username, password, profLink)
     driver.close()
 
+# Not working
 def SameEmail(driver,option=True):
     element = f"return document.querySelectorAll(\"button\")[2].textContent"
     element = driver.execute_script(element)
@@ -196,6 +197,7 @@ def SameEmail(driver,option=True):
         print("\tWaiting for input...")
         input()
 
+# Not working
 def NameCheck(driver, username):
     element = "return document.querySelectorAll(\".password_tag.warning\")[0].textContent"
     element = driver.execute_script(element)
